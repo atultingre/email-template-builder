@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../button";
 import Image from "next/image";
+import SignInButton from "./SignInButton";
 
 const Hero = () => {
   return (
@@ -17,7 +18,8 @@ const Hero = () => {
       </p>
       <div className="flex gap-5 mt-6">
         <Button variant="outline">Try Demo</Button>
-        <Button>Get Started</Button>
+        {/* <Button>Get Started</Button> */}
+        <SignInButton />
       </div>
       <Image
         src={"/landing.webp"}
