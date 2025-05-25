@@ -5,7 +5,7 @@ import SignInButton from "./SignInButton";
 
 const Hero = () => {
   return (
-    <div className="px-10 md:px-28 lg:px-44 xl:px-56 flex flex-col items-center mt-24">
+    <div className="px-10 md:px-28 lg:px-44 xl:px-56 flex flex-col items-center my-24">
       <h2 className="font-extrabold text-3xl md:text-5xl text-center">
         AI-Powered
         <span className="text-primary"> Email Templates</span>
@@ -18,7 +18,6 @@ const Hero = () => {
       </p>
       <div className="flex gap-5 mt-6">
         <Button variant="outline">Try Demo</Button>
-        {/* <Button>Get Started</Button> */}
         <SignInButton />
       </div>
       <Image

@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ConvexProvider, ConvexReactClient } from "convex/react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import { userDetailContext } from "@/context/UserDetailContext";
 
 const Provider = ({ children }) => {
   const [userDetail, setUserDetail] = useState();
@@ -19,9 +20,9 @@ const Provider = ({ children }) => {
   return (
     <ConvexProvider client={convex}>
       <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
-        <UserDetailContext.Provider value={{ userDetail, setUserDetail }}>
+        <userDetailContext.Provider value={{ userDetail, setUserDetail }}>
           {children}
-        </UserDetailContext.Provider>
+        </userDetailContext.Provider>
       </GoogleOAuthProvider>
     </ConvexProvider>
   );
@@ -30,5 +31,5 @@ const Provider = ({ children }) => {
 export default Provider;
 
 export const useUserDetail = () => {
-  return useContext(useUserDetailContext);
+  return useContext(userDetailContext);
 };
