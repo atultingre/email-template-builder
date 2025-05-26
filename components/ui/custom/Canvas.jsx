@@ -9,9 +9,7 @@ const Canvas = () => {
     <div className="mt-20 flex justify-center items-center">
       <div
         className={`bg-white p-6 w-full ${screenSize == "desktop" ? "max-w-2xl" : "max-w-md"} `}
-      >
-        ds
-      </div>
+      ></div>
     </div>
   );
 };
