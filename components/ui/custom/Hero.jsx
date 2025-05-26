@@ -21,7 +21,7 @@ const Hero = () => {
         <SignInButton />
       </div>
       <Image
-        src={"/landing.webp"}
+        src={"/landing.png"}
         alt="landing"
         width={1000}
         height={800}
